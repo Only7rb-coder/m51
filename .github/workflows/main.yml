@@ -40,7 +40,7 @@ jobs:
             make ${args} m51_eur_open_defconfig
             make ${args} 
             ./scripts/config --file out/.config \
- 	          -d UH \
+            -d UH \
             -d RKP \
             -d KDP \
             -d SECURITY_DEFEX \
