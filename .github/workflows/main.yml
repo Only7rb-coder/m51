@@ -39,6 +39,15 @@ jobs:
             LLVM_IAS=1
             make ${args} m51_eur_open_defconfig
             make ${args} 
+            ./scripts/config --file out/.config \
+ 	    -d UH \
+            -d RKP \
+            -d KDP \
+            -d SECURITY_DEFEX \
+            -d INTEGRITY \
+            -d FIVE \
+            -d TRIM_UNUSED_KSYMS \
+            -d KNOX_NCM
 
       - name: build ak3
         run : |
